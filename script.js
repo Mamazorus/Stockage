@@ -54,3 +54,15 @@ downloadBtn.addEventListener('click', () => {
     downloadBtn.classList.remove('clicked');
   }, 5000);
 });
+
+const downloadFilesList = document.querySelector('.download-files-list');
+const downloadInner = document.querySelector('.download-inner');
+
+downloadInner.addEventListener('wheel', function(e) {
+  // Appliquer le scroll à download-files-list
+  downloadFilesList.scrollTop += e.deltaY;
+
+  // Empêcher le scroll de la page dans tous les cas
+  e.preventDefault();
+  e.stopPropagation();
+}, { passive: false }); // ← très important pour que preventDefault fonctionne

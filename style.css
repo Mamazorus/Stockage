@@ -39,6 +39,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'inter-regular';
+  src: url('./fonts/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 body,
 *,
@@ -158,9 +166,13 @@ body,
     height: 70vh;
   }
 
-  .stockage_logo{
+  .stockage_logo, .stockage_logo2{
     margin-right: 40px;
   }
+
+  .stockage_logo2 {
+    display: none;  
+}
 
   .dropdown-container {
     position: relative;
@@ -170,7 +182,6 @@ body,
     font-size: 20px;
     color: #E0E9FF;
     cursor: pointer;
-    padding: 10px 15px;
     display: flex;
     align-items: center;
     font-family: 'inter-Medium', sans-serif;
@@ -201,8 +212,8 @@ body,
     display: none;
     flex-direction: column;
     position: absolute;
-    top: calc(100% + 0px); /* Juste en dessous de HOME, avec petit espace */
-    left: 20px; /* Aligné à gauche de HOME */
+    top: calc(100% + 10px); /* Juste en dessous de HOME, avec petit espace */
+    left: 7.5px; /* Aligné à gauche de HOME */
     min-width: 140px;
     z-index: 1000;
   }
@@ -303,21 +314,74 @@ body,
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 .main-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .download-box {
-  border-radius: 40px;
-  width: 574px;
+  margin: 60px 40px 80px 40px;
+  border-radius: 20px;
+  width: 580px;
   height: 670px;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 40px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box;
+  position: relative;
+}
+
+
+
+.download-header {
+  margin-bottom: 40px;
+  
+}
+
+.download-inner {
+  position: relative;
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin: 0 40px; /* 80px total (40px gauche + 40px droite) */
+  box-sizing: border-box;
+}
+
+.download-footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1600px) {
+  .stockage_logo, .logo-link {
+    display: none;
+  }
+
+  .stockage_logo2 {
+    display:flex
+  }
+  
+  .nav-left,
+  .nav-right {
+    gap: 0px;
+  }
 }
 
 .download-title {
@@ -332,8 +396,9 @@ body,
 .download-button {
   position: absolute;
   bottom: 40px;
-  left: 40px;
-  padding: 5px 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 15px;
   font-size: 20px;
   font-family: 'inter-Medium', sans-serif;
   border-radius: 99px;
@@ -347,6 +412,7 @@ body,
   transition: all 800ms cubic-bezier(0.25, 1, 0.5, 1);
   overflow: hidden;
 }
+
 
 .download-button:hover {
   background-color: #E0E9FF;
@@ -410,3 +476,151 @@ body,
   position: relative;
   bottom: 1px;
 }
+
+
+
+
+.download-info {
+  padding: 20px 20px 0px 20px;
+}
+
+.download-title-text {
+  font-size: 20px;
+  color: #19162F;
+  margin: 0 0 8px 0;
+  font-family: 'inter-Medium', sans-serif;
+}
+
+.download-subtext {
+  font-size: 14px;
+  color: rgba(25, 22, 47, 0.5);
+  font-family: 'inter-light', sans-serif;
+}
+
+
+.download-inner {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin: 0 40px;
+  flex-grow: 1;
+  overflow: hidden; /* Important pour éviter que children débordent */
+}
+
+
+
+
+
+.download-files-list {
+  margin: 0px 0px 0px 0px;
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;  
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+  pointer-events: auto;
+}
+
+
+.file-item {
+  margin-left: 20px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  font-family: 'inter-Medium';
+  font-size: 16px;
+  color: #19162F;
+  line-height: 125%;
+}
+
+.file-size {
+  font-family: 'Inter-Regular'; 
+  font-size: 12px;
+  color: rgba(25, 22, 47, 0.5);
+  margin-top: 4px;
+}
+
+.divider {
+  height: 0.5px;
+  background-color: rgba(25, 22, 47, 0.25);
+  width: 100%;
+}
+
+.download-files-list::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+.download-files-list::-webkit-scrollbar-thumb {
+  background-color: rgba(25, 22, 47, 0.4);
+  border-radius: 99px;
+}
+
+
+
+.divider-top{
+  margin-top: 40px;
+  height: 0.5px;
+  background-color: rgba(25, 22, 47, 0.25);
+  width: 100%;
+}
+.divider-bottom{
+  margin-bottom: 20px;
+  height: 0.5px;
+  background-color: rgba(25, 22, 47, 0.25);
+  width: 100%;
+}
+
+
+
+
+.file-item {
+  position: relative;
+  padding-right: 40px; /* espace pour le bouton */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.3s;
+}
+
+.download-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(5px);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  color: #19162F;
+  cursor: pointer;
+}
+
+
+.file-item:hover .download-btn {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.download-icon {
+  width: 20px;
+  height: 20px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  color: #007bff; /* stroke devient bleu au hover */
+}
+
+.download-btn:hover .download-icon {
+    transform: scale(1.1);
+}
+
+
