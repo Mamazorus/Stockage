@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockage · Maël Auzenet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="grain"></div>
+
+
+
+    
+
+    <header>
+      <nav class="navbar">
+        <div class="nav-edges">
+          <div class="nav-left">
+           <a href="index.html"><img class="stockage_logo" src="img/stockage_logo.png"></a>
+            <div class="dropdown-container">
+              <div class="dropdown" onclick="toggleMenu()">
+                <div class="dropdown-label">
+                  <div id="triangle" class="triangle"></div>
+                  HOME
+                </div>
+              </div>
+              <div id="submenu" class="submenu">
+                <a href="#">PORTFOLIO</a>
+                <a href="#">SERVICES</a>
+                <a href="#">QUI SUIS-JE ?</a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="nav-right">
+            <div class="date-time-wrapper">
+              <div class="date-nav">‎ </div>
+              <div class="date" id="date"></div>
+              <div class="time">
+                <span id="hours"></span><span id="blinker">:</span><span id="minutes"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+            <div class="nav-center">
+              <a href="#" class="logo-link">
+                <svg class="logo" width="30" height="30" viewBox="0 0 850 850" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_18_5)">
+                    <rect width="170" height="850" fill="currentColor"/>
+                    <rect x="680" y="442" width="170" height="408" fill="currentColor"/>
+                    <rect x="850.76" y="232.927" width="170" height="881.72" transform="rotate(45 850.76 232.927)" fill="currentColor"  class="rect-hover-rotate"/>
+                    <rect x="732.87" y="-123.002" width="170" height="596.615" transform="rotate(45 732.87 -123.002)" fill="currentColor"/>
+                    <rect width="170" height="605.316" transform="matrix(-0.707107 0.707107 0.707107 0.707107 117.208 -123)" fill="currentColor"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_18_5">
+                      <rect width="850" height="850" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+        </nav>
+      </header>
+
+
+
+      <main class="main-section">
+        <div class="download-box">
+          <h1 class="download-title">Télécharger vos <br> fichiers ici :</h1>
+      
+          <button class="download-button" id="downloadBtn">
+            <span class="button-content">
+              Télécharger
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 3v14m0 0l-6-6m6 6l6-6" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 21h14" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="check-content">
+              Merci
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </main>
+      
+
+      
+    
+   
+
+    
+    
+    
+
+
+
+
+
+
+      <hr class="fade-hr" />
+ 
+    <footer id="section-footer" class="footer">
+      <div class="fade-text">
+      <div class="footer-firstLine">
+        <h2 class="footer-BigText">V.1</h2>
+        <h3 class="footer-BigText">2DAM</h3>
+      </div>
+      </div>
+
+      
+    <div class="footer-flex">
+      <div>
+        <p class="footer-title basteleur">Support</p>
+        <p class="footer-paragraphe">Cloud</p>
+      </div>
+  
+      <div>
+        <p class="footer-title basteleur">Professions</p>
+        <p>Graphiste</p>
+        <p>Webdesigner</p>
+      </div>
+  
+      <div>
+        <p class="footer-title basteleur">Mise à jour</p>
+        <p>2025</p>
+      </div>
+      
+      <div>
+        <p class="footer-title basteleur">Designer</p>
+        <p>Maël Auzenet</p>
+      </div>
+      
+    </div>
+       <div class="footer-lastline">
+         <p>Copyright 
+           <a target="_blank" href="https://maelauzenet.netlify.app/"> ©Maël Auzenet</a> All rights reserved
+          </p>
+        </div>
+         
+    </footer>
+  </div>
+
+    <script>
+      // Force le défilement vers le haut de la page au chargement
+      window.onload = function() {
+        window.scrollTo(0, 0);
+      };
+
+      // Force le défilement vers le haut de la page avant le rechargement
+      window.onbeforeunload = function() {
+        window.scrollTo(0, 0);
+      };
+    </script>
+    <script src="https://kit.fontawesome.com/3b3604d1b9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lenis@1.1.21/dist/lenis.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
